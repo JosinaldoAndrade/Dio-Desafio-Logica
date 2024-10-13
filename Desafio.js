@@ -1,32 +1,37 @@
-let nome = "José"
-let nivel = 3500
+let vitorias = 50
+let derotas = 3
 
+console.log(resultadoJogador(100,6))
 
-if (nivel <= 1000){
-    console.log(`O Herói de nome ${nome} está no nível de Ferro`)
+function resultadoJogador(vitorias,derotas){
+    let saldo = vitorias-derotas
+    let retorno 
+
+    
+if (saldo <= 10){
+    retorno=`O Heroi tem de saldo:  ${saldo} está no nível de Ferro`
 }
-else if(nivel >= 1001 && nivel <= 2000) {
-    console.log(`O Herói de nome ${nome} está no nível de Bronze`) 
+else if(saldo >= 11 && saldo <= 20) {
+    retorno=`O Heroi tem de saldo:  ${saldo} está no nível de Bronze` 
 }
-else if(nivel >= 2001 && nivel <= 5000) {
-    console.log(`O Herói de nome ${nome} está no nível de Prata`)
+else if(saldo >= 21 && saldo <= 50) {
+    retorno=`O Heroi tem de saldo:  ${saldo} está no nível de Prata`
 }
-else if(nivel >= 5001 && nivel <= 7000) {
-    console.log(`O Herói de nome ${nome} está no nível de Ouro`)
+else if(saldo >= 51 && saldo <= 80) {
+    retorno=`O Heroi tem de saldo:  ${saldo} está no nível de Ouro`
 }
-else if(nivel >= 7001 && nivel <= 8000) {
-    console.log(`O Herói de nome ${nome} está no nível de Platina`)
+else if(saldo >= 81 && saldo <= 90) {
+    retorno=`O Heroi tem de saldo:  ${saldo} está no nível de Diamante`
 }
-else if(nivel >= 8001 && nivel <= 9000) {
-    console.log(`O Herói de nome ${nome} está no nível de Ascendente`)
+else if(saldo >= 91 && saldo <= 100) {
+    retorno=`O Heroi tem de saldo:  ${saldo} está no nível de Lendário`
 }
-else if(nivel >= 9001 && nivel <= 10000) {
-    console.log(`O Herói de nome ${nome} está no nível de Imortal`)
-}
-else if(nivel >= 10001) {
-    console.log(`O Herói de nome ${nome} está no nível de Radiante`)
+else if(saldo >= 101) {
+    retorno=`O Heroi tem de saldo:  ${saldo} está no nível de Imortal`
 }
 
+return retorno
+}
 
 
 
